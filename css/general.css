@@ -34,12 +34,18 @@ Praragraoph Default :1.6
   - Tints:
   #fdf2e9 
   #fae5d3
-  - Shades:#cf711f
+  #ec8b4e
+  
+  - Shades:
+  #cf711f
   - Accents:
-  - Greys: #555  #333
-         
+  - Greys:
+   #555 
+   #333
+  #6f6f66 (lighest grey allowed on   #fdf2e9 )
 
  ----05 SHADOWS
+  0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
  ---- 6 BORDER-RADius
     DEFAULT:9px
@@ -77,10 +83,26 @@ body {
 /* ************** */
 /* GENERAL REUSEABLE COMPONENTS */
 /* ************** */
+
+.container {
+  /* 1140px */
+  padding: 0 3.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
-  row-gap: 9.6rem;
   column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -98,13 +120,6 @@ body {
   align-items: center;
 }
 
-.container {
-  /* 1140px */
-  padding: 0 3.2rem;
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -115,7 +130,7 @@ body {
 
 .heading-primary {
   line-height: 1.05;
-  font-size: 5.2;
+  font-size: 5.2rem;
   margin-bottom: 3.2rem;
 }
 .heading-secondary {
@@ -195,6 +210,27 @@ body {
   /* border-bottom: none; */
   border-bottom: 1px solid transparent;
 }
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icons {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
 /* HELPER/SETTING CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;
