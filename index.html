@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Always include this line of code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -9,6 +13,7 @@
       rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/general.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
     <title>Omnifood</title>
     <script
       type="module"
@@ -18,21 +23,25 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </head>
   <body>
+    <!-- Navigation bar -->
+    <!-- <div class="container"> -->
+
     <header class="header">
       <a href="#">
         <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Section 1</a></li>
-          <li><a class="main-nav-link" href="#">Section 2</a></li>
-          <li><a class="main-nav-link" href="#">Section 3</a></li>
-          <li><a class="main-nav-link" href="#">Section 4</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Section 5</a></li>
+          <li><a class="main-nav-link" href="#">How it works</a></li>
+          <li><a class="main-nav-link" href="#">Meals</a></li>
+          <li><a class="main-nav-link" href="#">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <!-- First section/ -->
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
@@ -87,6 +96,7 @@
       </section>
 
       <section class="section-how">
+        <!-- Z pattern Text right Image left -->
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -94,6 +104,7 @@
           </h2>
         </div>
         <div>
+          <!-- Floating option Examples -->
           <div class="container grid grid--2-cols grid--center-v">
             <!-- STEP 01 -->
             <div class="step-text-box">
@@ -485,8 +496,8 @@
 
         <div class="container grid">
           <aside class="plan-details">
-            Prices include all appliclable taxes, you can cancel at any
-            time.both plans include the following:
+            Prices include all applicable taxes, you can cancel at any time.
+            Both plans include the following:
           </aside>
         </div>
 
@@ -519,8 +530,8 @@
             <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
             <p class="feature-title">Pause anytime</p>
             <p class="feature-text">
-              Going on vacation? Just pause your subscription, and we refund
-              unused days.
+              Going on vacation? Just pause your subscription, and we will
+              refund unused days.
             </p>
           </div>
         </div>
@@ -578,7 +589,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container grid grid--5-cols">
+      <div class="container grid grid--footer">
         <div class="logo-col">
           <a href="#" class="footer-logo">
             <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
@@ -606,10 +617,10 @@
         </div>
         <div class="address-col">
           <p class="footer-heading">Contact us</p>
-          <address>
-            <a class="footer-link"
-              >623 Harrison St., 2nd Floor, San Francisco, CA 94107 Phone:</a
-            >
+          <address class="contacts">
+            <p class="address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
             <p>
               <a class="footer-link" href="tel:415-201-6370"> 415-201-6370 </a>
 
@@ -619,6 +630,7 @@
             </p>
           </address>
         </div>
+        <!-- Footer collumns -->
         <nav class="nav col">
           <p class="footer-heading">Account</p>
           <ul class="footer-nav">
@@ -637,7 +649,7 @@
             <li><a class="footer-link" href="#">Careers</a></li>
           </ul>
         </nav>
-
+        <!--  -->
         <nav class="nav col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
