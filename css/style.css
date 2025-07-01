@@ -9,6 +9,7 @@
   /* BECAUSE WE want head to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -52,20 +53,20 @@
   background-color: #cf711f;
 }
 
-/* moblie */
-.btn-moblie-nav {
+/* mobile */
+.btn-mobile-nav {
   border: none;
   background-color: #fdf2e9;
   cursor: pointer;
   display: none;
 }
-.icon-moblie-nav {
+.icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
   color: #333;
 }
 
-.icon-moblie-nav[name="close-outline"] {
+.icon-mobile-nav[name="close-outline"] {
   display: none;
 }
 /* *************** */

@@ -74,9 +74,9 @@ equal to 16px
   }
 }
 /* ************** */
-/* Below 928 (tablets) Pixels */
+/* Below 928px (tablets) Pixels */
 /* ************** */
-@media (max-width: 58rem) {
+@media (max-width: 59rem) {
   html {
     font-size: 50%;
   }
@@ -97,6 +97,7 @@ equal to 16px
   .hero-img {
     width: 60%;
   }
+
   .logos img {
     height: 3.2rem;
   }
@@ -124,7 +125,7 @@ equal to 16px
   }
 
   /* MOBLIE NAVIGATION */
-  .btn-moblie-nav {
+  .btn-mobile-nav {
     display: block;
   }
 
@@ -135,16 +136,40 @@ equal to 16px
     left: 0;
     width: 100%;
     height: 100vh;
+
+    transform: translateX(100%);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 1s ease-in-out;
+
     /* Hide the navagation */
     /* Allows no transitions at all */
     /* display: none; */
+    /* STEP 01 Hide the element visually. */
     opacity: 0;
+
+    /*STEP 02 Make it unacessable to mouse and keyboard.  */
+    pointer-events: none;
+
+    /* STEP 03 Hide from screen reader */
+    visibility: hidden;
   }
+
   .nav-open .main-nav {
     opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
   }
   .main-nav-list {
     flex-direction: column;
@@ -153,6 +178,117 @@ equal to 16px
   .main-nav-list:link,
   .main-nav-list:visited {
     font-size: 3rem;
+  }
+  .section-featured {
+    padding: 4.8rem 0 3.2rem;
+  }
+}
+
+/* ************** */
+/* Below 706px ( Smaller tablets) Pixels */
+/* ************** */
+
+@media (max-width: 44em) {
+  .logos img {
+    height: 2.4rem;
+  }
+  .grid--4-cols,
+  .grid--3-cols,
+  .grid--5-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+    align-self: center;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+    margin-bottom: 4.8rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* ************** */
+/* Below 544px (For Phones) Pixels */
+/* ************** */
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--3-cols,
+  .grid--4-cols,
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  .cta-text-box {
+    grid-template-columns: 1fr;
+    /* height: auto; */
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    background-color: #fdf2e9;
+    padding: 4.8rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .hero-img {
+    width: 88%;
+  }
+  .logos img {
+    height: 1.2rem;
+    /* height: 2.4rem; */
+  }
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+  .cta {
+    grid-template-columns: 1fr;
+  }
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+  .cta-text-box {
+    padding: 3.2rem;
+    /* color: red; */
+    /* color: inherit; */
   }
 }
 
