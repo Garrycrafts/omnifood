@@ -52,6 +52,22 @@
   background-color: #cf711f;
 }
 
+/* moblie */
+.btn-moblie-nav {
+  border: none;
+  background-color: #fdf2e9;
+  cursor: pointer;
+  display: none;
+}
+.icon-moblie-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-moblie-nav[name="close-outline"] {
+  display: none;
+}
 /* *************** */
 /* HERO SECTION */
 /* *************** */
