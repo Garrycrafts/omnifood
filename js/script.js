@@ -1,11 +1,9 @@
 console.log("hello world!");
 
 const myName = "Jonas schmedtmann";
-const h1 = (document.querySelector = ".heading-primary");
+const h1 = document.querySelector(".heading-primary");
 console.log(myName);
 console.log(h1);
-
-console.log("Is this a node?", typeof process !== "undefined");
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
